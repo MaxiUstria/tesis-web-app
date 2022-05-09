@@ -1,0 +1,191 @@
+<% content_for :title do %>
+    Proyecto 1
+<% end %>
+
+<% content_for :description do %>
+    Esta es la descripción del proyecto 1
+<% end %>
+
+<!-- TAB CONTROLLERS -->
+<input id="panel-1-ctrl"
+       class="panel-radios" type="radio" name="tab-radios" checked>
+<input id="panel-2-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-3-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-4-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="panel-5-ctrl"
+       class="panel-radios" type="radio" name="tab-radios">
+<input id="nav-ctrl"
+       class="panel-radios" type="checkbox" name="nav-checkbox">
+
+<!-- TABS LIST -->
+<ul id="tabs-list">
+    <!-- MENU TOGGLE -->
+    <label id="open-nav-label" for="nav-ctrl"></label>
+    <li id="li-for-panel-1">
+      <label class="panel-label"
+             for="panel-1-ctrl">General</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-2">
+      <label class="panel-label"
+             for="panel-2-ctrl">Datos</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-3">
+      <label class="panel-label"
+             for="panel-3-ctrl">Templates</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-4">
+      <label class="panel-label"
+             for="panel-4-ctrl">Participantes</label>
+    </li><!--INLINE-BLOCK FIX
+ --><li id="li-for-panel-5" class="last">
+      <label class="panel-label"
+             for="panel-5-ctrl">Configuración</label>
+    </li>
+    <label id="close-nav-label" for="nav-ctrl">Close</label>
+</ul>
+
+<!-- THE PANELS -->
+<article id="panels">
+  <div class="container">
+    <section id="panel-1">
+      <main>
+        <h1>Proyecto 1 <span class="badge badge-primary">Investigación</span></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a diam urna. Praesent justo augue, aliquam ac interdum at, congue in augue. Fusce vitae ornare enim. Aenean convallis ligula ex. In tincidunt, est eget feugiat congue, arcu elit pellentesque leo, nec tincidunt ex tortor finibus ex. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p> 
+      </main>
+    </section>
+    <section id="panel-2">
+      <main>
+        <h1 style='display: inline'>Datos</h1>
+        <button data-toggle="modal" href="#mi_modal" class="btn btn-primary pull-right">Agregar fuente de datos</button>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Filtrar por</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Todos</option>
+                <option>Encuestas</option>
+                <option>Entrevistas</option>
+            </select>
+        </div>
+        <!-- Modal-->
+  <div class="modal fade" id="mi_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Agregar fuente de Datos</h4>
+        </div>
+        <div class="modal-body">
+            <label for="exampleFormControlSelect1">Tipo de dato</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>Encuestas</option>
+                <option>Entrevistas</option>
+            </select>
+            <br/>
+            <button class="btn btn-primary" style='margin: 20px; width: 200px'>Importar</button>
+            <br/>
+            <button class="btn btn-primary" style='margin: 20px; width: 200px'>Crear a partir de template</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+  <div class="col-md-2">&nbsp;</div>
+  <div class="col-md-8">
+    <div class="row space-16">&nbsp;</div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("encuesta.png", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_path %>"">Encuesta</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Juan Pérez</p>
+            <div class="thumbnail-description smaller">Encuesta hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("encuesta.png", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_path %>"">Encuesta 2</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Gimena Caroceli</p>
+            <div class="thumbnail-description smaller">Encuesta hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("encuesta.png", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_path %>"">Encuesta 3</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Maximiliano Ustria</p>
+            <div class="thumbnail-description smaller">Encuesta hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">&nbsp;</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2">&nbsp;</div>
+  <div class="col-md-8">
+    <div class="row space-16">&nbsp;</div>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("entrevista.webp", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_text_path %>"">Entrevista</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Juan Pérez</p>
+            <div class="thumbnail-description smaller">Entrevista hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("entrevista.webp", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_text_path %>"">Entrevista 2</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Gimena Caroceli</p>
+            <div class="thumbnail-description smaller">Entrevista hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <div class="caption text-center" >
+            <div class="position-relative">
+              <%= image_tag("entrevista.webp", :alt => "Encuesta", style: 'width:50px;height:72px;' ) %>
+            </div>
+            <h4 id="thumbnail-label"><a href="<%= components_show_text_path %>"">Entrevista 3</a></h4>
+            <p><i class="glyphicon glyphicon-user light-red lighter bigger-120"></i>Maximiliano Ustria</p>
+            <div class="thumbnail-description smaller">Entrevista hecha por Pablo Fernandez</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">&nbsp;</div>
+  </div>
+</div>
+</div>
+      </main>
+    </section>
+</article>

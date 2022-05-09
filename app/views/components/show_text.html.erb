@@ -1,0 +1,66 @@
+<% content_for :title do %>
+    Entrevista 1
+<% end %>
+
+<% content_for :description do %>
+    Esta es la descripción de la entrevista 1
+<% end %>
+
+<div class='row'>
+<button style='margin:20px;display:block !important' class="btn btn-primary">Agregar Etiqueta</button>
+  <div class='col-md-8' style="border-right: 1px solid #3c8dbc;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span onclick="renderInfo('neutral')"style='color:white;background-color: #3c8dbc; background-opacity: 0.7'>Integer ipsum arcu, varius sit amet dolor id </span>, fermentum sagittis ipsum. Praesent tincidunt imperdiet odio quis volutpat. Curabitur porttitor ante feugiat purus interdum aliquet. In hac habitasse platea dictumst. Nullam pretium orci vel porttitor commodo. Donec vestibulum sagittis nibh ut convallis. Duis laoreet vulputate pulvinar. Aliquam pretium cursus orci. Morbi non accumsan erat.</p>
+    <p>In egestas dui turpis, <span onclick="renderInfo('happy')" style='color:white;background-color: #00a65a; background-opacity: 0.7'>ac consectetur tortor fermentum at. Pellentesque habitant morbi tristique senectus et netus et malesuada</span> fames ac turpis egestas. Cras a leo quis erat tincidunt fringilla. Ut odio ante, accumsan id pretium quis, sodales ut leo. Aliquam efficitur viverra sem, non molestie orci sodales lobortis. Sed elementum euismod nisl non egestas. Curabitur quis ante scelerisque, semper lectus vel, ornare odio. Mauris ut magna sed felis euismod malesuada vel eget justo.</p>
+    <p>Donec quis aliquet magna, nec fringilla tellus. Vestibulum lorem justo, volutpat eget malesuada ut, porttitor at ex. Suspendisse eget sapien tempor, condimentum purus id, eleifend nibh. Praesent bibendum elit ultricies dolor sagittis, lobortis elementum nunc gravida. <span style='color:white;background-color: #f39c12; background-opacity: 0.7'>Ut varius libero scelerisque quam euismod aliquet ut ut eros. Cras semper ex ut neque cursus efficitur.</span> Sed imperdiet tellus lectus, vitae fringilla enim iaculis eu. Nam semper vehicula lacus vel pellentesque. Aliquam sapien sapien, mollis sit amet gravida non, dapibus vel ante. Sed sit amet ultricies odio. Phasellus eu orci lorem. Quisque nec tincidunt lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus nec tempor eros. Vivamus nec augue purus. Maecenas a mi quis lorem iaculis congue commodo et sapien.</p>
+    <p>Pellentesque eu mauris in magna laoreet pretium. Maecenas vestibulum nisi vel mauris pellentesque auctor. Suspendisse et varius odio. Donec a laoreet eros. In sit amet molestie nunc. In ornare, mi eu ornare imperdiet, est magna scelerisque arcu, ac condimentum quam dui id felis. Morbi ut erat lectus. Donec ante purus, egestas in euismod eleifend, congue ut enim. Nunc porta ligula elit, et ultricies risus malesuada vitae. Integer quis mauris condimentum lacus facilisis rhoncus. <span style='color:white;background-color: #dd4b39; background-opacity: 0.7'>Suspendisse lobortis nulla nisi. Suspendisse tristique tincidunt orci sit amet scelerisque.</span> Fusce ac sodales quam. Quisque viverra tellus id justo accumsan pulvinar. Vivamus rutrum ex id urna pulvinar elementum. Nulla pretium elit nisl, id tristique nisi congue egestas.</p>
+    <p>Nullam venenatis leo nec massa lacinia, hendrerit placerat lectus consectetur. Nulla in dolor in nisi egestas sodales. Sed rhoncus velit nec aliquam rhoncus. Ut pellentesque diam sem, volutpat efficitur justo dictum quis. Pellentesque posuere et mauris at malesuada. In eu vulputate mauris, fermentum suscipit augue. Phasellus et ipsum arcu. </p>
+  </div>
+  <div class='col-md-4' id="info_text">
+    <h2> Seleccione un texto </h2>
+  </div>
+</div>
+
+<script>
+  function renderInfo(option){
+    if (option == 'neutral'){
+      var myText = document.getElementById("info_text");
+      myText.innerHTML = ''
+      p = document.createElement("p");
+      span1 = document.createElement("span");
+      span1.className='badge badge-primary'
+      span2 = document.createElement("span");
+      span2.className='badge badge-primary'
+      span3 = document.createElement("span");
+      span3.className='badge badge-primary'
+      span1.innerHTML='indiferente x'
+      span2.innerHTML='aburrido x'
+      span3.innerHTML='distraido x'
+      p.innerHTML = 'Integer ipsum arcu, varius sit amet dolor id';
+      myText.append(p);
+      myText.append(span1);
+      myText.append(span2);
+      myText.append(span3);
+    }
+
+    if (option == 'happy'){
+      var myText = document.getElementById("info_text");
+      myText.innerHTML = ''
+      p = document.createElement("p");
+      span1 = document.createElement("span");
+      span1.className='badge badge-primary'
+      span2 = document.createElement("span");
+      span2.className='badge badge-primary'
+      span3 = document.createElement("span");
+      span3.className='badge badge-primary'
+      span1.innerHTML='feliz x'
+      span2.innerHTML='alegre x'
+      span3.innerHTML='emocionado x'
+      p.innerHTML = 'ac consectetur tortor fermentum at. Pellentesque habitant morbi tristique senectus et netus et malesuada';
+      myText.append(p);
+      myText.append(span1);
+      myText.append(span2);
+      myText.append(span3);
+    }
+
+  }
+</script>

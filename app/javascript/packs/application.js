@@ -11,6 +11,7 @@ require('admin-lte');
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme';
+import 'bootstrap/dist/js/bootstrap'
 import '../stylesheets/application'; // This file will contain your custom CSS
 
 import "admin-lte/dist/css/AdminLTE.css";
@@ -20,7 +21,6 @@ import "font-awesome/css/font-awesome.css";
 document.addEventListener("turbolinks:load", () => {
   $('[data-toggle="tooltip"]').tooltip()
 });
-
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
