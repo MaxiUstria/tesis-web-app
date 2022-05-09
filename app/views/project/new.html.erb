@@ -1,0 +1,35 @@
+<% content_for :title do %>
+    Crear Proyecto
+<% end %>
+
+<% content_for :description do %>
+    Crear un nuevo proyecto de investigación
+<% end %>
+
+<div class='row'>
+    <div class='col-md-6 offset-md-3'>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre del proyecto">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Fecha de inicio</label>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fecha de inicio">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Colaboradores</label>
+                <input type="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Colaborador">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Estado</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>Análisis</option>
+                <option>Investigación</option>
+                <option>Publicación</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+    </div>
+</div>
