@@ -4,4 +4,7 @@ class ProjectController < ApplicationController
 
   def show
   end
+
+  def all
+  end
 end
